@@ -9,7 +9,7 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 class ShrinkTraitTest extends TestCase
 {
     /**
-     * A basic test example.
+     * A test for the Shrink Trait. shrink() removes space between HTML tags
      *
      * @return void
      */
