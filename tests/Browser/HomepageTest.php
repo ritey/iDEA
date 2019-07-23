@@ -20,4 +20,17 @@ class HomepageTest extends DuskTestCase
                     ->assertSee(config('app.name'));
         });
     }
+
+    /**
+     * A basic browser test to ensure the about loads and displays 'About site name' in the title bar.
+     *
+     * @return void
+     */
+    public function test_about_page_loads()
+    {
+        $this->browse(function (Browser $browser) {
+            $browser->visit('/about')
+                    ->assertTitle('About '.config('app.name'));
+        });
+    }
 }

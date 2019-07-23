@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('metas')
+<title>About {{ config('app.name', 'Laravel') }}</title>
+@endsection
+
 @section('content')
 <div id="about-idea">
     <div class="d-flux container-fluid">
