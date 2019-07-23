@@ -12,6 +12,7 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700" rel="stylesheet">
 
     <!-- Styles -->
     <link defer href="{{ mix('css/app.css') }}" rel="stylesheet">
@@ -75,6 +76,18 @@
         <main class="py-4">
             @yield('content')
         </main>
+
+        <div class="container-fluid bg-2">
+            <div class="col p-5">
+                <div class="container bg-2">
+                    <div class="col">
+                        <ul class="nav">
+                            <li class="nav-item"><a class="text-white" href="{{ route('about') }}">About</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>

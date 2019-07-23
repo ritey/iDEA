@@ -6,3 +6,36 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+
+.bg-2 {
+    background:rgb(36,46,93);
+}
+
+.content a {
+    color:white;
+    text-decoration: underline;
+}
+
+a.launcher-btn {
+    background-color: #232d5e;
+    color: #fff;
+    padding: 0 20px;
+    min-height: 44px;
+    box-sizing: border-box;
+    display: inline-block;
+    line-height: 1.3em;
+    margin: 10px 0;
+    margin-top: 10px;
+    border-radius: 14px;
+    font-family: Amatic SC !important;
+    font-size: 32px !important;
+    border: 2px solid #fff;
+    text-decoration:none !important;
+}
+
+a.launcher-btn:hover {
+    background-color: #e6417b;
+    text-decoration: none;
+    color: #fff !important;
+}
