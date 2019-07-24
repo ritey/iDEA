@@ -15,6 +15,10 @@ return [
 
     'name' => env('APP_NAME', 'Laravel'),
 
+    'idea' => [
+        'cache_enabled' => env('APP_CACHE', false),
+    ],
+
     /*
     |--------------------------------------------------------------------------
     | Application Environment

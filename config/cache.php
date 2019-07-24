@@ -52,6 +52,16 @@ return [
             'path' => storage_path('framework/cache/data'),
         ],
 
+        'frontend_views' => [
+            'driver' => 'file',
+            'path' => storage_path('framework/cache/data/frontend'),
+        ],
+
+        'models' => [
+            'driver' => 'file',
+            'path' => storage_path('framework/cache/data/models'),
+        ],
+                
         'memcached' => [
             'driver' => 'memcached',
             'persistent_id' => env('MEMCACHED_PERSISTENT_ID'),
@@ -100,4 +110,5 @@ return [
 
     'prefix' => env('CACHE_PREFIX', Str::slug(env('APP_NAME', 'laravel'), '_').'_cache'),
 
+    'cache_duration' => env('APP_CACHE_DURATION', 60)
 ];
