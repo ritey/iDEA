@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Idea\Models\Badges;
 use Idea\Traits\Shrink;
 use Illuminate\Http\Request;
 
@@ -14,8 +15,9 @@ class HomeController extends Controller
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(Badges $badges)
     {
+        $this->badges = $badges;
         $this->middleware('auth')->except(['index','about']);
     }
 
@@ -26,7 +28,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('index');
+        $vars = [
+            'most_popular_citizen' => $this->badges->enabled()->where('category_id',1)->orderBy('complete_count','DESC')->take(3)->get(),
+        ];
+        return view('index',compact('vars'));
     }
 
     public function about()
